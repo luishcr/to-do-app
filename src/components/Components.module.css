@@ -1,0 +1,49 @@
+/* -------------------- */
+/* ToDo Counter */
+/* -------------------- */
+.TodoCounter {
+  margin: 1rem;
+}
+
+.TodoCounter h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* -------------------- */
+/* ToDo Search */
+/* -------------------- */
+.TodoSearch {
+  text-align: center;
+  margin: auto;
+}
+
+/* -------------------- */
+/* ToDo Item */
+/* -------------------- */
+.TodoItem {
+  margin: 1rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.TodoItem span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.TodoItem span i {
+  padding: 1rem;
+}
+
+/* -------------------- */
+/* ToDo List */
+/* -------------------- */
+.TodoList {
+  margin: 2rem;
+  padding: 0;
+}
