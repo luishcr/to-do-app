@@ -37,7 +37,15 @@
 }
 
 .TodoItem span i {
-  padding: 1rem;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.TodoItem span:first-child i:hover {
+  color: var(--check-color);
+}
+.TodoItem span:last-child i:hover {
+  color: var(--delete-color);
 }
 
 /* -------------------- */
@@ -46,4 +54,27 @@
 .TodoList {
   margin: 2rem;
   padding: 0;
+}
+
+/* -------------------- */
+/* ToDo CreateTodoBtn */
+/* -------------------- */
+.CreateTodoBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.CreateTodoBtn button {
+  margin: 2rem;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.CreateTodoBtn button i {
+  font-size: 4rem;
+}
+
+.CreateTodoBtn button i:hover {
+  color: var(--terciary-color);
 }

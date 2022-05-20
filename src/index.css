@@ -1,19 +1,36 @@
-/* GLOBALS STYLES */
+/*----------------------*/
+/*    GLOBALS STYLES    */
+/*----------------------*/
 
 html {
-  font-family: Helvetica, sans-serif;
   font-size: 62.5%;
 }
 
 body {
+  background-color: var(--background-color);
+  font-family: Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
+}
+
+:root {
+  --background-color: #fbf8f1;
+  --primary-color: #f7ecde;
+  --secondary-color: #e9dac1;
+  --terciary-color: #54bab9;
+  --check-color: #b4ff9f;
+  --delete-color: #b22727;
 }
 
 #root {
-  /* max-width: 70rem; */
+  width: 77rem;
   border: 1px solid grey;
   border-radius: 1rem;
+  background-color: var(--secondary-color);
 }
+
+/*----------------*/
+/*    VARIABLES   */
+/*----------------*/
