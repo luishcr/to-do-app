@@ -1,6 +1,17 @@
 /*----------------------*/
 /*    GLOBALS STYLES    */
 /*----------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --background-color: #21325e;
+  --primary-color: #3e497a;
+  --secondary-color: #f1d00a;
+  --terciary-color: #f0f0f0;
+  --check-color: #37d00c;
+  --delete-color: #da0037;
+  --text-color: #ffffff;
+}
 
 html {
   font-size: 62.5%;
@@ -8,29 +19,25 @@ html {
 
 body {
   background-color: var(--background-color);
-  font-family: Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-}
-
-:root {
-  --background-color: #fbf8f1;
-  --primary-color: #f7ecde;
-  --secondary-color: #e9dac1;
-  --terciary-color: #54bab9;
-  --check-color: #b4ff9f;
-  --delete-color: #b22727;
+  height: 100vh;
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(42, 42, 43, 0.7)
+    ),
+    url(https://images.pexels.com/photos/957040/night-photograph-starry-sky-night-sky-star-957040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
 }
 
 #root {
+  color: var(--text-color);
   width: 77rem;
-  border: 1px solid grey;
+  border: 1px solid var(--secondary-color);
   border-radius: 1rem;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  opacity: 95%;
 }
-
-/*----------------*/
-/*    VARIABLES   */
-/*----------------*/

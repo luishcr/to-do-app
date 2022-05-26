@@ -8,6 +8,7 @@
 .TodoCounter h2 {
   text-align: center;
   font-size: 2rem;
+  text-transform: uppercase;
 }
 
 /* -------------------- */
@@ -16,6 +17,16 @@
 .TodoSearch {
   text-align: center;
   margin: auto;
+  margin-bottom: 4rem;
+}
+
+.TodoSearch input {
+  width: calc(100% - 20rem);
+  padding: 1rem;
+  border-radius: 1rem;
+  border-color: var(--terciary-color);
+  color: var(--primary-color);
+  font-size: 2rem;
 }
 
 /* -------------------- */
@@ -24,10 +35,13 @@
 .TodoItem {
   margin: 1rem;
   font-size: 2rem;
+  font-weight: 800;
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  border: 1px solid var(--secondary-color);
   border-radius: 1rem;
+  background-color: var(--terciary-color);
+  color: var(--primary-color);
 }
 
 .TodoItem span {
@@ -37,7 +51,8 @@
 }
 
 .TodoItem span i {
-  padding: 2rem;
+  font-size: 3rem;
+  padding: 1.5rem;
   cursor: pointer;
 }
 
@@ -46,6 +61,11 @@
 }
 .TodoItem span:last-child i:hover {
   color: var(--delete-color);
+}
+
+.TodoItem p {
+  padding: 0 2rem;
+  font-size: 1.8rem;
 }
 
 /* -------------------- */
@@ -61,20 +81,33 @@
 /* -------------------- */
 .CreateTodoBtn {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .CreateTodoBtn button {
-  margin: 2rem;
+  margin: 4rem;
   border: none;
   cursor: pointer;
   background: none;
 }
 
 .CreateTodoBtn button i {
-  font-size: 4rem;
+  font-size: 5rem;
+  color: var(--terciary-color);
 }
 
 .CreateTodoBtn button i:hover {
-  color: var(--terciary-color);
+  color: var(--secondary-color);
+  transform: rotate(90deg);
+  transition: transform 0.5s;
+}
+
+@media screen and (max-width: 40rem) {
+  .TodoList {
+    margin: 0;
+  }
+
+  .TodoSearch input {
+    width: calc(100% - 5rem);
+  }
 }
