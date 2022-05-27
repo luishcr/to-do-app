@@ -1,9 +1,11 @@
 import styles from "./Components.module.css";
 
-function TodoCounter() {
+function TodoCounter({ total, completed }) {
   return (
     <div className={styles.TodoCounter}>
-      <h2>X of Y tasks completed ✊ </h2>
+      <h2>
+        {completed} of {total} tasks completed ✊{" "}
+      </h2>
     </div>
   );
 }

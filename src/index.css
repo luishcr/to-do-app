@@ -11,6 +11,7 @@
   --check-color: #37d00c;
   --delete-color: #da0037;
   --text-color: #ffffff;
+  --completed-task: #8a8989;
 }
 
 html {
@@ -29,7 +30,7 @@ body {
       rgba(58, 58, 158, 0.8),
       rgba(42, 42, 43, 0.7)
     ),
-    url(https://images.pexels.com/photos/957040/night-photograph-starry-sky-night-sky-star-957040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    url(/public/img/night-photograph-starry-sky-night-sky-star-957040.jpeg);
   background-size: cover;
 }
 
@@ -40,4 +41,22 @@ body {
   border-radius: 1rem;
   background-color: var(--primary-color);
   opacity: 95%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 7rem;
+  color: var(--secondary-color);
+}
+
+.completed {
+  background-color: var(--completed-task);
+}
+
+.completed span:first-child {
+  color: var(--check-color);
+}
+
+.completed p {
+  text-decoration: line-through double;
 }

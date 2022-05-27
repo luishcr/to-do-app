@@ -18,15 +18,21 @@
   text-align: center;
   margin: auto;
   margin-bottom: 4rem;
+  outline-color: var(--secondary-color);
 }
 
 .TodoSearch input {
   width: calc(100% - 20rem);
   padding: 1rem;
   border-radius: 1rem;
-  border-color: var(--terciary-color);
   color: var(--primary-color);
+
   font-size: 2rem;
+}
+
+.TodoSearch input:focus {
+  outline: 2px solid;
+  outline-color: var(--secondary-color);
 }
 
 /* -------------------- */
@@ -74,6 +80,10 @@
 .TodoList {
   margin: 2rem;
   padding: 0;
+}
+
+.TodoList * p.completed {
+  background-color: aqua;
 }
 
 /* -------------------- */
