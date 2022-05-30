@@ -11,7 +11,7 @@
   --check-color: #37d00c;
   --delete-color: #da0037;
   --text-color: #ffffff;
-  --completed-task: #8a8989;
+  --completed-task-background-color: #8a8989;
 }
 
 html {
@@ -49,8 +49,13 @@ h1 {
   color: var(--secondary-color);
 }
 
+h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+
 .completed {
-  background-color: var(--completed-task);
+  background-color: var(--completed-task-background-color);
 }
 
 .completed span:first-child {
@@ -59,4 +64,63 @@ h1 {
 
 .completed p {
   text-decoration: line-through double;
+}
+
+/* ICONS STYLES */
+.Icon__info {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.Icon__check {
+  font-size: 2rem;
+  margin-left: 1rem;
+  padding: 0.35rem;
+  cursor: pointer;
+  border: 0.2px solid rgb(190, 190, 190);
+  border-radius: 0.5rem;
+}
+
+.Icon__check:hover {
+  color: var(--check-color);
+  background-color: rgb(225, 225, 225);
+}
+
+.Icon__xmark {
+  font-size: 2rem;
+  margin-right: 1rem;
+  padding: 0.35rem;
+  cursor: pointer;
+  border: 0.2px solid rgb(190, 190, 190);
+  border-radius: 0.5rem;
+}
+
+.Icon__xmark:hover {
+  color: var(--delete-color);
+  background-color: rgb(225, 225, 225);
+}
+
+.Icon__plus {
+  font-size: 5rem;
+  color: var(--terciary-color);
+}
+
+.Icon__plus:hover {
+  color: var(--secondary-color);
+  transform: rotate(90deg);
+  transition: transform 0.5s;
+}
+
+/* ROTATE ICON ANIMATION */
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }

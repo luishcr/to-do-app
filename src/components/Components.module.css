@@ -56,19 +56,6 @@
   justify-content: center;
 }
 
-.TodoItem span i {
-  font-size: 3rem;
-  padding: 1.5rem;
-  cursor: pointer;
-}
-
-.TodoItem span:first-child i:hover {
-  color: var(--check-color);
-}
-.TodoItem span:last-child i:hover {
-  color: var(--delete-color);
-}
-
 .TodoItem p {
   padding: 0 2rem;
   font-size: 1.8rem;
@@ -99,17 +86,6 @@
   border: none;
   cursor: pointer;
   background: none;
-}
-
-.CreateTodoBtn button i {
-  font-size: 5rem;
-  color: var(--terciary-color);
-}
-
-.CreateTodoBtn button i:hover {
-  color: var(--secondary-color);
-  transform: rotate(90deg);
-  transition: transform 0.5s;
 }
 
 @media screen and (max-width: 40rem) {
