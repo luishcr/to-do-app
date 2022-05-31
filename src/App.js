@@ -5,13 +5,16 @@ import { TodoList } from "./components/TodoList";
 import { TodoItem } from "./components/TodoItem";
 import { CreateTodoButton } from "./components/CreateTodoButton";
 import { useLocalStorage } from "./hooks/useLocalStorage";
+import { TodoForm } from "./components/TodoForm";
+import { TodosLoading } from "./components/TodosLoading";
+import { Modal } from "./components/Modal";
 import { IconContext } from "react-icons";
-import { FaExclamationTriangle, FaCog } from "react-icons/fa";
+import { FaExclamationTriangle } from "react-icons/fa";
 
 const defaultTodos = [
-  { text: "Learn JavaScript", completed: true },
-  { text: "Create a react app", completed: true },
-  { text: "Learn Nextjs", completed: false },
+  // { text: "Learn JavaScript", completed: true },
+  // { text: "Create a react app", completed: true },
+  // { text: "Learn Nextjs", completed: false },
 ];
 
 function App() {
@@ -23,6 +26,7 @@ function App() {
   } = useLocalStorage("ToDos_v1", defaultTodos);
 
   const [searchValue, setSearchValue] = useState("");
+  const [openModal, setOpenModal] = useState(false);
 
   const completedTodos = todos.filter((todo) => todo.completed === true).length;
   const totalTodos = todos.length;
@@ -52,6 +56,15 @@ function App() {
     saveTodos(newTodos);
   };
 
+  const addTodo = (text) => {
+    const newTodos = [...todos];
+    newTodos.push({
+      completed: false,
+      text,
+    });
+    saveTodos(newTodos);
+  };
+
   return (
     <>
       <h1>To-Do App</h1>
@@ -68,14 +81,8 @@ function App() {
             </IconContext.Provider>
           </h3>
         )}
-        {loading && (
-          <h3>
-            Loading...{" "}
-            <IconContext.Provider value={{ className: "Icon__info rotate" }}>
-              <FaCog />
-            </IconContext.Provider>
-          </h3>
-        )}
+        {loading &&
+          new Array(3).fill(1).map((a, i) => <TodosLoading key={i} />)}
         {!loading && !searchedTodos.length && (
           <h3>There are not tasks to complete 👍</h3>
         )}
@@ -91,7 +98,17 @@ function App() {
         ))}
       </TodoList>
 
-      <CreateTodoButton />
+      {openModal && (
+        <Modal>
+          <TodoForm
+            openModal={openModal}
+            setOpenModal={setOpenModal}
+            addTodo={addTodo}
+          />
+        </Modal>
+      )}
+
+      <CreateTodoButton openModal={openModal} setOpenModal={setOpenModal} />
     </>
   );
 }

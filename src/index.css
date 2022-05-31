@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 :root {
-  --background-color: #21325e;
+  --background-color: rgb(33, 50, 94);
   --primary-color: #3e497a;
   --secondary-color: #f1d00a;
   --terciary-color: #f0f0f0;
@@ -101,14 +101,26 @@ h3 {
 }
 
 .Icon__plus {
-  font-size: 5rem;
+  font-size: 7rem;
   color: var(--terciary-color);
 }
 
 .Icon__plus:hover {
   color: var(--secondary-color);
-  transform: rotate(90deg);
-  transition: transform 0.5s;
+  transition: 0.3s;
+}
+
+.description {
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: none;
+  margin-top: 1rem;
+}
+
+.Icon__plus:hover + .description {
+  display: block;
+  color: var(--secondary-color);
+  transition: 0.5s;
 }
 
 /* ROTATE ICON ANIMATION */

@@ -1,18 +1,19 @@
 import styles from "./Components.module.css";
 import { IconContext } from "react-icons";
-import { FaPlusCircle } from "react-icons/fa";
+import { BsPlusCircleFill } from "react-icons/bs";
 
-function CreateTodoButton() {
+function CreateTodoButton({ openModal, setOpenModal }) {
   const addNewTask = () => {
-    console.log("New Task Added");
+    setOpenModal(!openModal);
   };
 
   return (
     <div className={styles.CreateTodoBtn}>
       <button onClick={addNewTask}>
         <IconContext.Provider value={{ className: "Icon__plus" }}>
-          <FaPlusCircle />
+          <BsPlusCircleFill />
         </IconContext.Provider>
+        <div className="description">Add to-dos!</div>
       </button>
     </div>
   );

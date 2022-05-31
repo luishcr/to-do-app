@@ -26,8 +26,8 @@
   padding: 1rem;
   border-radius: 1rem;
   color: var(--primary-color);
-
   font-size: 2rem;
+  position: relative;
 }
 
 .TodoSearch input:focus {
@@ -38,7 +38,8 @@
 /* -------------------- */
 /* ToDo Item */
 /* -------------------- */
-.TodoItem {
+.TodoItem,
+.TodosLoading {
   margin: 1rem;
   font-size: 2rem;
   font-weight: 800;
@@ -50,13 +51,15 @@
   color: var(--primary-color);
 }
 
-.TodoItem span {
+.TodoItem span,
+.TodosLoading span {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.TodoItem p {
+.TodoItem p,
+.TodosLoading p {
   padding: 0 2rem;
   font-size: 1.8rem;
 }
@@ -78,7 +81,13 @@
 /* -------------------- */
 .CreateTodoBtn {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.CreateTodoBtn__description {
+  display: none;
 }
 
 .CreateTodoBtn button {
@@ -96,4 +105,74 @@
   .TodoSearch input {
     width: calc(100% - 5rem);
   }
+}
+
+/* -------------------- */
+/* Modal */
+/* -------------------- */
+.ModalBackground {
+  background-color: rgba(33, 50, 94, 0.7);
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  right: -1rem;
+  bottom: -1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* -------------------- */
+/* FORM */
+/* -------------------- */
+.Form {
+  background-color: var(--terciary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 1rem;
+  padding: 3rem;
+  width: 55rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.Form label {
+  color: var(--primary-color);
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.Form textarea {
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--primary-color);
+  font-size: 2rem;
+  resize: vertical;
+}
+
+.Form textarea:focus {
+  outline: 2px solid;
+  outline-color: var(--secondary-color);
+}
+
+.Form__buttons {
+  display: flex;
+  justify-content: center;
+  column-gap: 3rem;
+  margin-top: 2rem;
+}
+
+.Form__buttons button {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  background-color: var(--terciary-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.Form__buttons button:hover {
+  background-color: var(--secondary-color);
+  transition: 0.3s;
 }

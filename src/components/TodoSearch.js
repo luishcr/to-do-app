@@ -12,7 +12,7 @@ function TodoSearch({ searchValue, setSearchValue }) {
       <input
         onChange={inputSearchValue}
         value={searchValue}
-        placeholder="Search or write a new task..."
+        placeholder="🔎 Search task..."
       />
     </div>
   );

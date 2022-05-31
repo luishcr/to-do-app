@@ -1,6 +1,6 @@
 import styles from "./Components.module.css";
 import { IconContext } from "react-icons";
-import { FaCheck, FaTimes } from "react-icons/fa";
+import { FaCheck, FaTrashAlt } from "react-icons/fa";
 
 function TodoItem(props) {
   return (
@@ -13,7 +13,7 @@ function TodoItem(props) {
       <p>{props.text}</p>
       <span onClick={props.deleteTask}>
         <IconContext.Provider value={{ className: "Icon__xmark" }}>
-          <FaTimes />
+          <FaTrashAlt />
         </IconContext.Provider>
       </span>
     </li>
