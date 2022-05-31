@@ -1,5 +1,5 @@
 {
-  "name": "todo-app",
+  "name": "to-do-app",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -41,5 +41,5 @@
   "devDependencies": {
     "gh-pages": "^4.0.0"
   },
-  "homepage": "https://luishcr.github.io/todo-app"
+  "homepage": "https://luishcr.github.io/to-do-app"
 }
