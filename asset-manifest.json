@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/todo-app/static/css/main.6c14c324.css",
-    "main.js": "/todo-app/static/js/main.33627608.js",
-    "static/media/night-photograph-starry-sky-night-sky-star-957040.jpeg": "/todo-app/static/media/night-photograph-starry-sky-night-sky-star-957040.36c29cf09047d52a37e8.jpeg",
-    "index.html": "/todo-app/index.html",
-    "main.6c14c324.css.map": "/todo-app/static/css/main.6c14c324.css.map",
-    "main.33627608.js.map": "/todo-app/static/js/main.33627608.js.map"
+    "main.css": "/to-do-app/static/css/main.329438bb.css",
+    "main.js": "/to-do-app/static/js/main.33627608.js",
+    "static/media/night-photograph-starry-sky-night-sky-star-957040.jpeg": "/to-do-app/static/media/night-photograph-starry-sky-night-sky-star-957040.36c29cf09047d52a37e8.jpeg",
+    "index.html": "/to-do-app/index.html",
+    "main.329438bb.css.map": "/to-do-app/static/css/main.329438bb.css.map",
+    "main.33627608.js.map": "/to-do-app/static/js/main.33627608.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c14c324.css",
+    "static/css/main.329438bb.css",
     "static/js/main.33627608.js"
   ]
 }
