@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/todo-app/static/css/main.7d9155d6.css",
+    "main.js": "/todo-app/static/js/main.383ce129.js",
+    "static/media/night-photograph-starry-sky-night-sky-star-957040.jpeg": "/todo-app/static/media/night-photograph-starry-sky-night-sky-star-957040.36c29cf09047d52a37e8.jpeg",
+    "index.html": "/todo-app/index.html",
+    "main.7d9155d6.css.map": "/todo-app/static/css/main.7d9155d6.css.map",
+    "main.383ce129.js.map": "/todo-app/static/js/main.383ce129.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d9155d6.css",
+    "static/js/main.383ce129.js"
+  ]
+}
